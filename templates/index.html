@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIRP API Interface</title>
+    <script>
+        async function getRadioFeatures() {
+            const radioId = document.getElementById('radioId').value;
+            const response = await fetch(`/api/radio/${radioId}`);
+            const data = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+        }
+
+        async function setMemory() {
+            const radioId = document.getElementById('radioId').value;
+            const memoryData = {
+                // Populate with actual memory data structure
+                number: 1,
+                freq: 147.56,
+                mode: "FM"
+            };
+            const response = await fetch(`/api/radio/${radioId}/memory`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(memoryData)
+            });
+            const data = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+        }
+
+        async function getAllRadios() {
+            const response = await fetch('/api/radios');
+            const data = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+</head>
+<body>
+    <h1>CHIRP API Interface</h1>
+    <input type="text" id="radioId" placeholder="Enter Radio ID">
+    <button onclick="getRadioFeatures()">Get Radio Features</button>
+    <button onclick="setMemory()">Set Memory</button>
+    <button onclick="getAllRadios()">Get All Radios</button>
+    <pre id="output"></pre>
+</body>
+</html>
