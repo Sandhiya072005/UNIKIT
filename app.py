@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-from chirp import chirp_common, directory  # Import necessary modules from chirp
+from ukit import chirp_common, directory  # Import necessary modules from chirp
 import logging
 
 app = Flask(__name__)

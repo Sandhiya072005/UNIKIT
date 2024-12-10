@@ -19,8 +19,8 @@ import unittest
 from unittest import mock
 
 
-from chirp import bitwise
-from chirp import memmap
+from ukit import bitwise
+from ukit import memmap
 
 
 class BaseTest(unittest.TestCase):

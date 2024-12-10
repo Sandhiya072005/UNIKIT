@@ -30,5 +30,5 @@ assets
 .vscode/
 /CppProperties.json
 .coverage
-chirpwx.spec
-chirp/locale/.files
+ukitwx.spec
+ukit/locale/.files

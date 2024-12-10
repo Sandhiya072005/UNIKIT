@@ -34,7 +34,7 @@ with warnings.catch_warnings():
 parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--all", action="store_true",
                     help="Check all files, ignoring blacklist")
-parser.add_argument("-d", "--dir", action="append", default=['chirp', 'tests'],
+parser.add_argument("-d", "--dir", action="append", default=['ukit', 'tests'],
                     help="Root directory of source tree")
 parser.add_argument("-s", "--stats", action="store_true",
                     help="Only show statistics")

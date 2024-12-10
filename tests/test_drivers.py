@@ -1,4 +1,4 @@
-from chirp import directory
+from ukit import directory
 from tests import load_tests
 
 __builtins__['_'] = lambda s: s

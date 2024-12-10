@@ -1,5 +1,5 @@
-from chirp import chirp_common
-from chirp import settings
+from ukit import chirp_common
+from ukit import settings
 from tests import base
 
 

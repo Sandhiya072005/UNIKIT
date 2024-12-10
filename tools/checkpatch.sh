@@ -13,7 +13,7 @@ function check_long_lines() {
     local files="$2"
 
     # For now, ignore this check on chirp/
-    files=$(echo $files | sed -r 's#\bchirp[^ ]*\b##')
+    files=$(echo $files | sed -r 's#\ukit[^ ]*\b##')
 
     if [ -z "$files" ]; then
         return

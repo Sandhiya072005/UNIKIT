@@ -20,8 +20,8 @@ import logging
 import sys
 import serial
 
-from chirp import chirp_common
-from chirp.drivers import idrp
+from ukit import chirp_common
+from ukit.drivers import idrp
 
 
 def open_device(dev):

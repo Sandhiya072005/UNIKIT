@@ -18,9 +18,9 @@ import os
 import unittest
 from unittest import mock
 
-from chirp import directory
-from chirp.drivers import alinco, alinco_dr735t
-from chirp import memmap
+from ukit import directory
+from ukit.drivers import alinco, alinco_dr735t
+from ukit import memmap
 
 
 class FakeAlincoSerial:

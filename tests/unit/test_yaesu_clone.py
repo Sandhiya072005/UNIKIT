@@ -3,11 +3,11 @@ import os
 import tempfile
 import unittest
 
-from chirp import directory
-from chirp.drivers import ft60
-from chirp.drivers import ft4
-from chirp.drivers import yaesu_clone
-from chirp import memmap
+from ukit import directory
+from ukit.drivers import ft60
+from ukit.drivers import ft4
+from ukit.drivers import yaesu_clone
+from ukit import memmap
 
 
 class TestYaesuChecksum(unittest.TestCase):

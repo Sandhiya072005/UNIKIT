@@ -1,9 +1,9 @@
 import pytest
 from unittest import mock
 
-from chirp import bitwise
-from chirp import chirp_common
-from chirp import errors
+from ukit import bitwise
+from ukit import chirp_common
+from ukit import errors
 from tests import base
 
 

@@ -2,11 +2,11 @@ import os
 import struct
 import unittest
 
-from chirp.drivers import kguv8e
-from chirp.drivers import kguv8d
-from chirp.drivers import kguv8dplus
-from chirp.drivers import kg935g
-from chirp import directory
+from ukit.drivers import kguv8e
+from ukit.drivers import kguv8d
+from ukit.drivers import kguv8dplus
+from ukit.drivers import kg935g
+from ukit import directory
 
 
 class FakeUV8D:

@@ -1,4 +1,4 @@
-from chirp import util
+from ukit import util
 from tests.unit import base
 
 

@@ -3,8 +3,8 @@ import random
 import time
 from unittest import mock
 
-from chirp import chirp_common
-from chirp import errors
+from ukit import chirp_common
+from ukit import errors
 from tests import base
 
 LOG = logging.getLogger(__name__)

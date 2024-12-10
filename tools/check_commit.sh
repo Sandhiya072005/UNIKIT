@@ -77,18 +77,18 @@ if git log ${BASE}.. --merges | grep .; then
     fail Please do not include merge commits in your PR
 fi
 
-make -C chirp/locale clean all >/dev/null 2>&1
-if git diff chirp/locale | grep '^+[^#+]' | grep -v POT-Creation; then
+make -C ukit/locale clean all >/dev/null 2>&1
+if git diff ukit/locale | grep '^+[^#+]' | grep -v POT-Creation; then
     fail Locale files need updating
 fi
 
 added_files=$(git diff --name-only --diff-filter=A ${BASE}..)
 added_py=$(git diff --name-only --diff-filter=A ${BASE}.. | grep '\.py$')
-if echo $added_py | grep -q chirp.drivers && ! echo $added_files | grep -q tests.images; then
+if echo $added_py | grep -q ukit.drivers && ! echo $added_files | grep -q tests.images; then
     fail All new drivers should include a test image
 fi
 
-existing_drivers=$(git ls-tree --name-only $BASE chirp/drivers/)
+existing_drivers=$(git ls-tree --name-only $BASE ukit/drivers/)
 limit=51
 for nf in $added_py; do
     for of in $existing_drivers; do

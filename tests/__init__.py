@@ -5,7 +5,7 @@ import unittest
 
 import pytest
 
-from chirp import directory
+from ukit import directory
 
 from tests import test_banks
 from tests import test_brute_force

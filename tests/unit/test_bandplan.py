@@ -1,6 +1,6 @@
 import unittest
 
-from chirp import bandplan
+from ukit import bandplan
 
 
 class FakeConfig:

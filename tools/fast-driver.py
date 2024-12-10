@@ -26,7 +26,7 @@ def parse_import_line(line):
 
 def find_imports(of_modules):
     driver_imports = []
-    for fn in glob.glob('chirp/drivers/*.py'):
+    for fn in glob.glob('ukit/drivers/*.py'):
         with open(fn) as f:
             lines = [ln for ln in f.readlines()
                      if 'import ' in ln and 'drivers' in ln]
@@ -47,13 +47,13 @@ files_by_module = [x.rsplit('/', 1) for x in files if '/' in x and '.py' in x]
 # Grab just the drivers
 driver_modules = set([os.path.splitext(os.path.basename(mod))[0]
                      for parent, mod in files_by_module
-                     if parent == 'chirp/drivers'])
+                     if parent == 'ukit/drivers'])
 
 # Determine which are live drivers that we don't test with these tests
 live_drivers = set()
 for driver in driver_modules:
     try:
-        with open(os.path.join('chirp', 'drivers', '%s.py' % driver)) as f:
+        with open(os.path.join('ukit', 'drivers', '%s.py' % driver)) as f:
             content = f.read()
     except FileNotFoundError:
         # File must have been removed
@@ -74,8 +74,8 @@ driver_modules.update(set(deps))
 
 # Determine if any base modules have been changed that would necessitate
 # running all the driver tests
-exclude_mods = ('chirp/wxui', 'chirp/cli', 'chirp/sources', 'chirp/drivers',
-                'chirp/locale', 'chirp/share', 'chirp/stock_configs',
+exclude_mods = ('ukit/wxui', 'ukit/cli', 'ukit/sources', 'ukit/drivers',
+                'ukit/locale', 'ukit/share', 'ukit/stock_configs',
                 'tools')
 base_modules = [mod for parent, mod in files_by_module
                 if parent not in exclude_mods]

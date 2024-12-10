@@ -1,12 +1,12 @@
 from distutils.core import setup
 from setuptools import find_packages
 
-setup(name='CHIRP',
+setup(name='UKIT',
       description='A cross-platform cross-radio programming tool',
       packages=find_packages(include=["chirp*"]),
       include_package_data=True,
       version=0,
-      url='https://chirp.danplanet.com',
+      url='UniversalKIT.com',
       python_requires=">=3.10,<4",
       install_requires=[
           'pyserial',
@@ -19,9 +19,9 @@ setup(name='CHIRP',
       },
       entry_points={
           'console_scripts': [
-              "chirp=chirp.wxui:chirpmain",
-              "chirpc=chirp.cli.main:main",
-              "experttune=chirp.cli.experttune:main",
+              "ukit=ukit.wxui:chirpmain",
+              "ukitc=ukit.cli.main:main",
+              "experttune=ukit.cli.experttune:main",
           ],
       },
       )

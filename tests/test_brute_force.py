@@ -1,8 +1,8 @@
 import logging
 
-from chirp import chirp_common
-from chirp import errors
-from tests import base
+from ukit import chirp_common
+from ukit import errors
+from ukit import base
 
 LOG = logging.getLogger(__name__)
 

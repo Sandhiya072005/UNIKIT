@@ -15,15 +15,15 @@
 
 import sys
 from tests import icom_clone_simulator
-from chirp import memmap
-from chirp.drivers import icw32
+from ukit import memmap
+from ukit.drivers import icw32
 from builtins import bytes
 
 import glob
 import os
 import unittest
 
-from chirp import directory
+from ukit import directory
 directory.import_drivers()
 
 

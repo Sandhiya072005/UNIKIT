@@ -21,8 +21,8 @@ environment:
 
 apps:
   chirp:
-    command: bin/chirp
-    desktop: lib/python3.10/site-packages/chirp/share/chirp.desktop
+    command: bin/ukit
+    desktop: lib/python3.10/site-packages/ukit/share/chirp.desktop
     extensions:
       # WARNING: gnome extension is incompatible with python apps.
       - gnome
