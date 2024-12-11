@@ -1,4 +1,4 @@
-# CHIRP Project
+# UKIT PROJECT
 
 This is the official git repository for the
 __[CHIRP](https://www.chirpmyradio.com)__ project.
